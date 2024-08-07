@@ -41,12 +41,12 @@ class CheckoutView(View):
                 zipcode=zip,
             )
 
-            usps = USPSApi("097UNIVE5841", test=True)
-            validation = usps.validate_address(address)
+            #usps = USPSApi("097UNIVE5841", test=True)
+            #validation = usps.validate_address(address)
             try:
-                valid = validation.result["AddressValidateResponse"]["Address"][
-                    "Address1"
-                ]
+                # valid = validation.result["AddressValidateResponse"]["Address"][
+                #     "Address1"
+                # ]
                 billing_address = BillingAddress(
                     user=self.request.user,
                     street_address=street_address,
